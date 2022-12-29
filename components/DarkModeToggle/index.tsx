@@ -11,7 +11,7 @@ export default function DarkModeToggle() {
   };
 
   return (
-    <div className="absolute right-0 top-0 my-8 mx-5 z-10">
+    <div className="absolute right-0 top-0 my-8 mx-5 z-10 hover:select-none">
       <input type="checkbox" id="darkmode-toggle" className="absolute top-0 right-0 w-full h-full hidden" onChange={handleDarkMode} />
       <label
         htmlFor="darkmode-toggle"
