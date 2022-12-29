@@ -39,7 +39,7 @@ export default function IdentityForm() {
   return (
     <form className="flex flex-col gap-5" onSubmit={handleSubmit(onIdentityFormSubmit)}>
       <FormInput type="text" label="Nome" name="name" register={register} error={errors?.name} defaultValue={identityFormData?.name} />
-      <div className="flex gap-10">
+      <div className="flex flex-wrap gap-10 md:flex-nowrap">
         <FormInput
           type="password"
           label="Senha"
@@ -57,7 +57,7 @@ export default function IdentityForm() {
           defaultValue={identityFormData?.password}
         />
       </div>
-      <div className="flex gap-10">
+      <div className="flex flex-wrap gap-10 md:flex-nowrap">
         <FormInput
           type="email"
           label="E-mail"
@@ -75,7 +75,7 @@ export default function IdentityForm() {
           defaultValue={identityFormData?.isoBirthdate}
         />
       </div>
-      <FormButton active={true} type="submit" className="self-end mt-16">
+      <FormButton active={true} type="submit" className="self-end mt-16 w-full min-w-full sm:w-fit sm:min-w-[200px]">
         Próximo passo
       </FormButton>
     </form>

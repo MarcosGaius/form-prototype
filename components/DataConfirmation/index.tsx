@@ -23,14 +23,14 @@ export default function DataConfirmation() {
   };
 
   return (
-    <section className="w-[450px] flex flex-col gap-8 bg-white py-10 px-14 rounded-md shadow-lg font-poppins">
-      <h1 className="text-2xl font-semibold self-center">Usuário criado!</h1>
+    <section className="w-full flex flex-col gap-8 bg-white py-10 px-8 rounded-md shadow-lg font-poppins sm:px-14 sm:w-[450px]">
+      <h1 className="text-2xl font-semibold text-center self-center">Usuário criado!</h1>
       <div className="flex flex-col gap-4">
         <DataParagraph label="Nome" data={identityFormData!.name} />
         <DataParagraph label="Email" data={identityFormData!.email} />
         <hr className="m-4"></hr>
-        <div className="flex flex-wrap justify-between gap-3">
-          <DataParagraph label="Rua" data={addressFormData!.street} />
+        <div className="flex flex-wrap justify-between gap-3 w-full">
+          <DataParagraph label="Rua" data={addressFormData!.street} className="flex-grow" />
           <DataParagraph label="Número" data={addressFormData!.number} />
         </div>
         <DataParagraph label="CEP" data={addressFormData!.cep} />

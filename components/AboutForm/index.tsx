@@ -40,11 +40,11 @@ export default function AboutForm() {
   return (
     <form className=" flex flex-col gap-5" onSubmit={handleSubmit(onAboutFormSubmit)}>
       <FormTextArea label="Nos conte mais sobre você" name="about" register={register} error={errors.about} />
-      <div className="flex justify-end gap-5 mt-16">
-        <FormButton active={false} type="button" onClick={handlePreviousForm}>
+      <div className="flex flex-wrap-reverse justify-end gap-5 mt-16 md:flex-nowrap">
+        <FormButton active={false} type="button" onClick={handlePreviousForm} className="!w-full sm:!w-fit">
           Anterior
         </FormButton>
-        <FormButton active={true} type="submit">
+        <FormButton active={true} type="submit" className="!w-full sm:!w-fit">
           Próximo passo
         </FormButton>
       </div>

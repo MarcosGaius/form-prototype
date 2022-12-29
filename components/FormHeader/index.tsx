@@ -8,8 +8,8 @@ export default function FormHeader() {
 
   return (
     <>
-      <h1 className="text-2xl font-medium">Criação de usuário</h1>
-      <div className="flex gap-8">
+      <h1 className="text-2xl text-center font-medium md:text-left">Criação de usuário</h1>
+      <div className="flex flex-wrap gap-8 md:flex-nowrap">
         <StepIdentifier
           icon={<RiUser5Fill className="w-5 h-5" />}
           stepText="Identificação de usuário"

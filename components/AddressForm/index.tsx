@@ -52,12 +52,12 @@ export default function AddressForm() {
 
   return (
     <form className="flex flex-col gap-5" onSubmit={handleSubmit(onAddressFormSubmit)}>
-      <div className="flex gap-10">
+      <div className="flex flex-wrap gap-10 md:flex-nowrap">
         <FormInput type="text" label="CEP" name="cep" register={register} error={errors.cep} defaultValue={addressFormData?.cep} />
         <FormInput type="text" label="Rua" name="street" register={register} error={errors.street} defaultValue={addressFormData?.street} />
       </div>
-      <div className="flex gap-10 w-full">
-        <div className="flex gap-4 w-1/2">
+      <div className="flex flex-wrap gap-10 w-full md:flex-nowrap">
+        <div className="flex flex-wrap gap-4 w-full sm:flex-nowrap md:w-1/2">
           <FormInput
             type="text"
             label="Número"
@@ -75,7 +75,7 @@ export default function AddressForm() {
             defaultValue={addressFormData?.district}
           />
         </div>
-        <div className="flex w-1/2">
+        <div className="flex w-full md:w-1/2">
           <FormInput type="text" label="Cidade" name="city" register={register} error={errors.city} defaultValue={addressFormData?.city} />
         </div>
       </div>
@@ -87,11 +87,11 @@ export default function AddressForm() {
         error={errors.landmark}
         defaultValue={addressFormData?.landmark}
       />
-      <div className="flex justify-end gap-5 mt-16">
-        <FormButton active={false} type="button" onClick={handlePreviousForm}>
+      <div className="flex flex-wrap-reverse justify-end gap-5 mt-16 md:flex-nowrap">
+        <FormButton active={false} type="button" onClick={handlePreviousForm} className="!w-full sm:!w-fit">
           Anterior
         </FormButton>
-        <FormButton active={true} type="submit">
+        <FormButton active={true} type="submit" className="!w-full sm:!w-fit">
           Próximo passo
         </FormButton>
       </div>
