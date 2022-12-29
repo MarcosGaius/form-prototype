@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import DarkModeProvider from "./DarkMode";
 import FormProvider from "./Form";
 
 interface IProviderProps {
@@ -6,5 +7,9 @@ interface IProviderProps {
 }
 
 export default function Providers({ children }: IProviderProps) {
-  return <FormProvider>{children}</FormProvider>;
+  return (
+    <DarkModeProvider>
+      <FormProvider>{children}</FormProvider>
+    </DarkModeProvider>
+  );
 }

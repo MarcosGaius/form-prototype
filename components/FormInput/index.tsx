@@ -22,7 +22,7 @@ export default function FormInput({ label, type, name, register, error, defaultV
         size={1}
         type={type}
         {...register(name)}
-        className={`w-full bg-slate-100 p-3 rounded-md border outline-none text-black text-sm ${
+        className={`w-full bg-slate-100 dark:bg-zinc-700 p-3 rounded-md border outline-none text-black dark:text-white text-sm ${
           error ? "border-red-700" : "border-transparent"
         }`}
         defaultValue={defaultValue}

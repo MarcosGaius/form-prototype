@@ -17,7 +17,7 @@ export default function FormTextArea({ label, name, register, error }: IFormText
       </label>
       <textarea
         {...register(name)}
-        className={`bg-slate-100 p-3 rounded-md border outline-none text-black text-sm resize-none ${
+        className={`bg-slate-100 dark:bg-zinc-700 p-3 rounded-md border outline-none text-black dark:text-white text-sm resize-none ${
           error ? "border-red-700" : "border-transparent"
         }`}
         rows={10}

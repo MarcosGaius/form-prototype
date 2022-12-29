@@ -23,7 +23,7 @@ export default function DataConfirmation() {
   };
 
   return (
-    <section className="w-full flex flex-col gap-8 bg-white py-10 px-8 rounded-md shadow-lg font-poppins sm:px-14 sm:w-[450px]">
+    <section className="w-full flex flex-col gap-8 bg-white dark:bg-neutral-900 dark:text-white py-10 px-8 rounded-md shadow-lg font-poppins sm:px-14 sm:w-[450px]">
       <h1 className="text-2xl font-semibold text-center self-center">Usuário criado!</h1>
       <div className="flex flex-col gap-4">
         <DataParagraph label="Nome" data={identityFormData!.name} />

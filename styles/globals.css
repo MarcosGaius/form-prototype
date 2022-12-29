@@ -5,3 +5,7 @@
 .mainBackgroundGradient {
   background: linear-gradient(to right, #f8fafc 50%, #ffffff 50% 100%);
 }
+
+.dark__mainBackgroundGradient {
+  background: linear-gradient(to right, #27272a 50%, #202022 50% 100%);
+}
